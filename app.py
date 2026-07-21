@@ -26,6 +26,26 @@ def submit():
 
     except Exception as e:
         return str(e)
+    
+@app.route("/todo")
+def todo():
+    return render_template("todo.html")
+
+@app.route("/submittodoitem", methods=["POST"])
+def submittodoitem():
+    try:
+        itemName = request.form["itemName"]
+        itemDescription = request.form["itemDescription"]
+
+        collection.insert_one({
+            "itemName": itemName,
+            "itemDescription": itemDescription
+        })
+
+        return "To-Do Item Submitted Successfully!"
+
+    except Exception as e:
+        return str(e)
 
 if __name__ == "__main__":
     app.run(debug=True)
