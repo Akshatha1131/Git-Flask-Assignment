@@ -1,10 +1,12 @@
 [
-    {
-        "id": 1,
-        "name": "Akshatha"
-    },
-    {
-        "id": 2,
-        "name": "Python"
-    }
+  {
+    "id": 1,
+    "name": "Akshatha",
+    "course": "Flask"
+  },
+  {
+    "id": 2,
+    "name": "Tutedude",
+    "course": "Git"
+  }
 ]
