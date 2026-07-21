@@ -26,6 +26,10 @@ def submit():
 
     except Exception as e:
         return str(e)
+    
+@app.route("/todo")
+def todo():
+    return render_template("todo.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
